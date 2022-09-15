@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import React, { useEffect } from 'react'
+import { useState } from 'react'
+import axios from 'axios'
 
 function App() {
+  const [data, setData] = useState([]);
+  console.log(data);
+  useEffect(() => {
+    getData().then((resolve) => {
+      setData(resolve);
+    });
+
+  },[]);
+
+  async function getData() {
+    let url = `${process.env.REACT_APP_SERVER}/post`;
+    const axiosRequest = await axios.get(url);
+    const datax = axiosRequest.data;
+    return datax;
+
+  }
+
+  async function deletePost(id) {
+    let url = `${process.env.REACT_APP_SERVER}/post/${id}`;
+    await axios.delete(url);
+    getData().then((resolve) => {
+      setData(resolve);
+    });
+    
+  }
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Main data={data} dfunc={deletePost}/>
+      <Footer />
+    </>
   );
 }
 

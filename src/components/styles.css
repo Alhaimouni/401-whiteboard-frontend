@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+.head ,.foot{
+    background-color: burlywood;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postCard {
+    background-color: rgb(235, 205, 166);
+    min-width: 500px;
+    height: 500px;
+    margin: 20px 20px;
+    border: 2px rgb(14, 41, 5) solid ;
+    border-radius: 15px;
+    padding: 25px;
+    
+    
+}
+.postCard:hover {
+    box-shadow: -5px -5px 10px rgb(172, 212, 150);
+    transition-duration: 500ms;
+    position: relative;
+    top: 5px;
+}
+.postCard h3 {
+    text-align: center;
+    background-color: rgb(47,79,79);
+    color: aliceblue;
+    padding: 10px 5px;
+    border-radius: 15px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgb(218, 218, 212);
+    font-size: x-large;
+}
+.main {
+    display: flex;
+    padding: 150px 50px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: darkslategrey;
+}
+
+.cmntHolder {
+    background-color: rgb(227, 173, 173);
+    padding: 10px;
+    border-radius: 10px;
+    height: 200px;
+    overflow: auto;
+}
+.cmntHolder p,.cmntHolderp{
+    padding: 5px;
+    background-color: rgb(227, 173, 173);
+    border-radius: 10px;
+}
+
+.form {
+    margin-top: 45px;
+}
