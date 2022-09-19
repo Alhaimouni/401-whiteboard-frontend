@@ -7,9 +7,23 @@
     color: rgb(22, 57, 12);
     height: 200px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-flow: column wrap;
     border-bottom: 6px solid rgb(128, 28, 45);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.log {
+    background-color: rgb(47,79,79);
+    width: 100%;
+    min-height: 500px;
+    padding: 100px;
+
 }
 
 .foot{
