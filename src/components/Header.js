@@ -1,4 +1,6 @@
+import Log from './Log'
 import './styles.css'
+
 
 function Header() {
   return (
@@ -9,3 +11,6 @@ function Header() {
 }
 
 export default Header
+
+
+
