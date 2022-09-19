@@ -9,9 +9,9 @@ function Log({ sifunc, sufunc }) {
 
   return (
     <div className='log'>
-      <h3>SignUp :</h3>
+      <h3>Signup:</h3>
       <SingupForm sufunc={sufunc} />
-      <h3>Signin :</h3>
+      <h3>Login:</h3>
       <SigninForm sifunc={sifunc} />
     </div>
   )
