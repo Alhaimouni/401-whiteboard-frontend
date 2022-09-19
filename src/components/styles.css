@@ -23,7 +23,13 @@
     width: 100%;
     min-height: 500px;
     padding: 100px;
+}
 
+
+.log h3 {
+    color: rgb(241,230,217);
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .foot{
@@ -171,4 +177,26 @@
     padding: 10px;
     width: 100px;
     border-radius: 5px;
+}
+
+#input {
+    height: 25px;
+    padding: 5px;
+    margin: 0px 3px;
+    border-radius: 10px;
+}
+
+#bt {
+    margin: 0px 3px;
+    border-radius: 5px;
+    padding: 3px 6px;
+    background-color: rgb(128,28,45);
+    color: aliceblue;
+    border: 1px solid rgb(128,28,45);
+    font-weight: bold;
+    box-shadow: 1px 1px 1px greenyellow;
+}
+
+#bt:hover {
+    box-shadow: 2px 2px 5px rgb(128,28,45);
 }
