@@ -200,3 +200,28 @@
 #bt:hover {
     box-shadow: 2px 2px 5px rgb(128,28,45);
 }
+
+.logee {
+    display: flex;
+    background-color: inherit;
+    flex-flow: column wrap;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logee p {
+    text-align: center;
+}
+
+.logee button {
+    background-color: rgb(154, 112, 112);
+    width: 150px;
+    border-radius: 10px;
+}
+
+.logee button:hover {
+    background-color: rgb(193, 70, 70);
+    width: 150px;
+    border-radius: 10px;
+}
