@@ -1,16 +1,18 @@
-import Log from './Log'
-import './styles.css'
+import "./styles.css";
+import cookies from "react-cookies";
 
-
-function Header() {
+function Header({ x, loggedin }) {
   return (
-    <div className='head'>
+    <div className="head">
       <h1>Haimouni's White-Board</h1>
+      {loggedin && (
+        <div className="logee">
+          <p>Welcome Back {cookies.load("name")}</p>
+          <button onClick={x}>LogOut</button>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Header
-
-
-
+export default Header;
