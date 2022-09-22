@@ -11,6 +11,7 @@ import cookies from "react-cookies";
 function App() {
   const [data, setData] = useState([]);
   const [loggedin, setLoggedin] = useState(false);
+  const [comments , setComments] = useState([]);
 
   useEffect(() => {
     const token = cookies.load("token");
@@ -41,12 +42,13 @@ function App() {
     });
   }
 
-  async function addComment(id, obj) {
-    let url = `${process.env.REACT_APP_SERVER}/comment/${id}`;
+  async function addComment(postId, obj, userId) {
+    let url = `${process.env.REACT_APP_SERVER}/comment/${postId}/${userId}`;
     if (obj.text === "") {
       alert(`add comment before submit`);
     } else {
-      let comments = await axios.post(url, obj);
+      let AllcommentsWithUsers = await axios.post(url, obj);
+      setComments(AllcommentsWithUsers);
       getData().then((resolve) => {
         setData(resolve);
       });
@@ -118,6 +120,7 @@ function App() {
       {loggedin && (
         <Main
           data={data}
+          comments ={comments}
           dfunc={deletePost}
           acfunc={addComment}
           apfunc={addPost}
