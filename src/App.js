@@ -41,8 +41,8 @@ function App() {
     });
   }
 
-  async function addComment(id, obj,) {
-    let url = `${process.env.REACT_APP_SERVER}/comment/${id}/${cookies.load('id')}`;
+  async function addComment(id, obj) {
+    let url = `${process.env.REACT_APP_SERVER}/comment/${id}`;
     if (obj.text === "") {
       alert(`add comment before submit`);
     } else {
