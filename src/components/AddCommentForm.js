@@ -8,12 +8,14 @@ function AddCommentForm({ acfunc, item }) {
 
   function addCooment(e) {
     e.preventDefault();
+
+    let userID = cookies.load('id')
     let comment = {
       text : e.target.comment.value,
       textId : item.id,
-      userId : cookies.load('id')
+      userId : userID,
     }
-    acfunc(item.id,comment);
+    acfunc(item.id,comment,userID);
     setCmn('');
   }
 
